@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_task_detail"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="eu.execom.todolistgrouptwo.activity.TaskDetailActivity">
+
+    <TextView
+        android:id="@+id/titleField"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Title" />
+
+    <EditText
+        android:id="@+id/detailTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:focusable="false"
+        android:enabled="false"
+        android:cursorVisible="false"
+        android:layout_below="@+id/titleField"
+        android:layout_marginTop="@dimen/activity_horizontal_margin"
+        android:textSize="21dp"/>
+
+    <TextView
+        android:id="@+id/descriptionField"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/detailTitle"
+        android:layout_marginTop="@dimen/activity_horizontal_margin"
+        android:text="Description" />
+
+    <EditText
+        android:id="@+id/detailDescription"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:focusable="false"
+        android:enabled="false"
+        android:cursorVisible="false"
+        android:layout_marginTop="@dimen/activity_horizontal_margin"
+        android:layout_below="@+id/descriptionField"/>
+
+    <ImageButton
+        android:id="@+id/editTitle"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:src="@android:drawable/ic_menu_edit"
+        android:layout_alignParentRight="true"
+        android:backgroundTint="@color/light"
+        android:layout_alignParentEnd="true"
+        android:layout_below="@+id/titleField" />
+
+    <ImageButton
+        android:id="@+id/editDescription"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:src="@android:drawable/ic_menu_edit"
+        android:layout_alignParentRight="true"
+        android:backgroundTint="@color/light"
+        android:layout_alignParentEnd="true"
+        android:layout_below="@+id/descriptionField" />
+
+    <CheckedTextView
+        android:id="@+id/done"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Done"
+        android:textSize="25dp"
+        android:layout_marginTop="32dp"
+        android:checkMarkTint="@color/colorAccent"
+        android:layout_below="@+id/detailDescription"
+        android:checkMark="?android:attr/textCheckMarkInverse" />
+
+    <Button
+        android:id="@+id/saveButton"
+        android:layout_width= "match_parent"
+        android:layout_weight="1"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/activity_horizontal_margin"
+        android:text="Save changes"
+        android:backgroundTint="@color/light"
+        android:textColor="@color/white"
+        android:layout_below="@id/done"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:id = "@+id/task_buttons"
+        android:layout_below="@id/saveButton">
+
+        <Button
+            android:id="@+id/cancleButton"
+            android:layout_width= "170dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/light"
+            android:textColor="@color/white"
+            android:layout_marginTop="@dimen/activity_horizontal_margin"
+            android:text="Cancel" />
+
+        <Button
+            android:id="@+id/deleteButton"
+            android:layout_width= "170dp"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/light"
+            android:textColor="@color/white"
+            android:layout_weight="1"
+            android:layout_marginTop="@dimen/activity_horizontal_margin"
+
+            android:text="Delete" />
+    </LinearLayout>
+
+
+</RelativeLayout>
+
